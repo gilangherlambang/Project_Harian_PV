@@ -7,7 +7,7 @@ package Form;
 
 /**
  *
- * @author USER
+ * @author gilang herlambang
  */
 public class Menu_Utama extends javax.swing.JFrame {
 
@@ -16,6 +16,7 @@ public class Menu_Utama extends javax.swing.JFrame {
      */
     public Menu_Utama() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /**
@@ -27,16 +28,14 @@ public class Menu_Utama extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mPelanggan = new javax.swing.JMenuItem();
         mKasir = new javax.swing.JMenuItem();
         mBarang = new javax.swing.JMenuItem();
+        mNota = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Form/kasir.png"))); // NOI18N
 
         jMenu1.setText("Master");
 
@@ -64,6 +63,14 @@ public class Menu_Utama extends javax.swing.JFrame {
         });
         jMenu1.add(mBarang);
 
+        mNota.setText("Nota");
+        mNota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mNotaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mNota);
+
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
@@ -72,17 +79,11 @@ public class Menu_Utama extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addComponent(jLabel1)
-                .addContainerGap(232, Short.MAX_VALUE))
+            .addGap(0, 559, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel1)
-                .addContainerGap(202, Short.MAX_VALUE))
+            .addGap(0, 463, Short.MAX_VALUE)
         );
 
         pack();
@@ -105,6 +106,12 @@ public class Menu_Utama extends javax.swing.JFrame {
         barang frmB = new barang();
         frmB.setVisible(true);
     }//GEN-LAST:event_mBarangActionPerformed
+
+    private void mNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mNotaActionPerformed
+        // TODO add your handling code here:
+        nota frmN = new nota();
+        frmN.setVisible(true);
+    }//GEN-LAST:event_mNotaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,11 +149,11 @@ public class Menu_Utama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem mBarang;
     private javax.swing.JMenuItem mKasir;
+    private javax.swing.JMenuItem mNota;
     private javax.swing.JMenuItem mPelanggan;
     // End of variables declaration//GEN-END:variables
 }
